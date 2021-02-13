@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My cool web site</title>
+    <title>Code made simple</title>
 
     <style>
         body {
@@ -14,40 +14,46 @@
         .container {
             display: flex;
             flex-direction: column;
-            height: 80vh;
             align-content: center;
-            text-align: center;
             justify-content: center;
-            background: #b92b27;
-            background: -webkit-linear-gradient(to right, #b92b27, #1565c0);
-            background: linear-gradient(to right, #b92b27, #1565c0);
-            background-position: 0%;
+            height: 80vh;
+            text-align: center;
+
+            background: #009FFF;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to left, #ec2F4B, #009FFF);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to left, #ec2F4B, #009FFF);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+            background-position: 50%;
             background-size: 200%;
-            transition: background-position 0.3s;
+
+            transition: background-position .3s;
         }
 
         .container:hover {
             background-position: 100%;
         }
 
-        .container > span {
-            font-size: 4em;
-            color: #fff;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
         .container:hover span {
-            color:  #cedbe9;
+            color: #009FFF;
         }
 
+        .container span {
+            font-size: 3em;
+            font-weight: 600;
+            color: white;
+        }
     </style>
 </head>
 
 <body>
+
     <div class="container">
         <span>Code made simple</span>
     </div>
+
 </body>
 
 </html>
