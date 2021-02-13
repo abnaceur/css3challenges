@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My cool web site</title>
+
+    <style>
+        body {
+            margin: 0 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 80vh;
+            align-content: center;
+            text-align: center;
+            justify-content: center;
+            background: #b92b27;
+            background: -webkit-linear-gradient(to right, #b92b27, #1565c0);
+            background: linear-gradient(to right, #b92b27, #1565c0);
+            background-position: 0%;
+            background-size: 200%;
+            transition: background-position 0.3s;
+        }
+
+        .container:hover {
+            background-position: 100%;
+        }
+
+        .container > span {
+            font-size: 4em;
+            color: #fff;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .container:hover span {
+            color:  #cedbe9;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <span>Code made simple</span>
+    </div>
+</body>
+
+</html>
