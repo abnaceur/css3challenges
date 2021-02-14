@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opacity transition challeng 2</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            background-image: url('./img-2.jpeg');
+            height: 80vh;
+            background-position: 0px;
+            transition: background-position .3s;
+        }
+
+        .container:hover {
+            background-position: 10px;
+        }
+
+        .text {
+            display: flex;
+            background-color: rgba(0, 0, 0, .5);
+            height: 100%;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            opacity: 0;
+            transition: opacity .3s;
+        }
+
+        .text:hover {
+            opacity: 1;
+        }
+
+        .text h3 {
+            font-size: 64px;
+            margin-bottom: 20px;
+        }
+
+        .text span {
+            font-size: 24px;
+            line-height: 35px;
+        }
+
+        /* Style section two */
+        .section {
+            display: flex;
+            flex-direction: column;
+            padding: 20px 20px;
+            justify-content: center;
+        }
+
+        .button {
+            text-align: center;
+            margin: 20px;
+        }
+
+        .button:hover + .cards .card {
+            opacity: 1;
+        } 
+
+        .button span {
+            cursor: pointer;
+            font-size: 24px;
+            background-color: blue;
+            color:white;
+            padding: 10px 30px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+            width: 300px;
+            text-align: center;
+            opacity: 0;
+            transition: opacity .3s;
+        }
+
+
+        .card:first-child {
+            margin-right: 10px;
+            transition-delay: .3s;
+        }
+
+        .card:nth-child(2) {
+            transition-delay: .5s;
+        }
+
+        .card img {
+            width: 300px;
+        }
+
+        .card h3 {
+            margin: 15px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="text">
+            <h3>Find your dream house</h3>
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing <br> elit. Doloremque, ad.</span>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="button">
+            <span>See more</span>
+        </div>
+        <div class="cards">
+            <div class="card">
+                <img src='./img-1.jpeg' />
+                <h3>House one</h3>
+                <span>Lorem ipsum dolor, sit amet consectetur
+                    adipisicing elit. Sit, cupiditate.</span>
+            </div>
+
+            <div class="card">
+                <img src='./img-1.jpeg' />
+                <h3>House one</h3>
+                <span>Lorem ipsum dolor, sit amet consectetur
+                    adipisicing elit. Sit, cupiditate.</span>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
